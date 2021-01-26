@@ -1,11 +1,13 @@
 package main
 
-import "go-ds-algo/src"
+import (
+	"fmt"
+	"go-ds-algo/src"
+)
 
 func main() {
-	list := src.LinkedList{}
-	list.Add(5)
-	list.Add(7)
-	list.Add(9)
-	list.Print()
+	var nums = [5]int{1, 3, 7, 11, 15}
+
+	bs := src.NewBinarySearch(nums)
+	fmt.Println(bs.Find(11))
 }
